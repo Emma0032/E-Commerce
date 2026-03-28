@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Checkout from "./pages/Checkout";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -33,6 +34,7 @@ export default function App() {
             <Route path="checkout" element={<Checkout />} />
           </Route>
         </Routes>
+        <Analytics />
       </Router>
     </CartProvider>
   );
